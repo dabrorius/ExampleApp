@@ -1,5 +1,4 @@
 == README
 
-Features:
-- works without JS
-- form is disabled upon submit
+Basic to-do list application, includes API and unit tests.
+Tools used: Rails 4.1, PostgreSQL, jQuery, rspec
