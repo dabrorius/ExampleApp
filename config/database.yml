@@ -1,0 +1,17 @@
+development:
+  host: localhost
+  adapter: postgresql
+  encoding: unicode
+  database: example_todo_do_dev
+  pool: 5
+  username: <%= ENV['USER'] %>
+  password: <%= ENV['PASSWORD'] %>
+
+test:
+  host: localhost
+  adapter: postgresql
+  encoding: unicode
+  database: example_todo_do_test
+  pool: 5
+  username: <%= ENV['USER'] %>
+  password: <%= ENV['PASSWORD'] %>

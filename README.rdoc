@@ -1,0 +1,5 @@
+== README
+
+Features:
+- works without JS
+- form is disabled upon submit

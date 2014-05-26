@@ -1,0 +1,8 @@
+<% if @task.valid? %>
+  $("#errors").addClass("hidden");
+  $("#tasks").append("<%= j render(partial: 'task_row', locals: { task: @task }) %>");
+  $("#new_task")[0].reset();
+<% else %>
+  $("#errors").html("<%= j( raw @task.errors.full_messages.join('</br>') ) %>");
+  $("#errors").removeClass("hidden");
+<% end %>

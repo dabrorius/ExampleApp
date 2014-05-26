@@ -1,0 +1,39 @@
+// Place all the styles related to the Tasks controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.show {
+  cursor: pointer; 
+  cursor: hand;
+}
+
+#tasks th {
+  text-align: left;
+}
+
+#errors {
+  background-color: #FFDDDD;
+  border: 1px solid #FF0000;
+  padding: 10px;
+  color: #660000;
+  margin: 10px 0;
+}
+
+.sortable {
+  cursor: pointer; 
+  cursor: hand;
+}
+
+.big {
+  width: 40%;
+  
+}
+
+.small {
+  width: 10%;
+  text-align: center;
+}
+
+#task_description {
+  width: 100%;
+}

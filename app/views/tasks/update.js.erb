@@ -1,0 +1,12 @@
+$("#task_<%= @task.id %> .description .show").html("<%= @task.description %>");
+$("#task_<%= @task.id %> .priority .show").html("<%= @task.priority %>");
+$("#task_<%= @task.id %> .due_at .show").html("<%= @task.due_at_formatted %>");
+
+<% if @task.completed? %>
+  $("#task_<%= @task.id %>").addClass("completed");
+<% else %>
+  $("#task_<%= @task.id %>").removeClass("completed");
+<% end %>
+
+$("#task_<%= @task.id %>").find(".show").removeClass("hidden");
+$("#task_<%= @task.id %>").find(".edit").addClass("hidden");

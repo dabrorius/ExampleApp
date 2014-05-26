@@ -1,0 +1,7 @@
+curl http://localhost:3000/tasks.json?access_token=f2747fa2144e64fb90ff2425e66a620d
+curl --data "task[description]=blabla&task[priority]=20" http://localhost:3000/tasks.json?access_token=f2747fa2144e64fb90ff2425e66a620d
+curl -X PUT --data "task[description]=taskupdate&task[priority]=14" http://localhost:3000/tasks/14.json?access_token=f2747fa2144e64fb90ff2425e66a620d
+curl -X DELETE http://localhost:3000/tasks/14.json?access_token=f2747fa2144e64fb90ff2425e66a620d
+
+
+curl -X PUT --data "task[description]=Feed pigs&task[due_at]=2010/01/01 15:37" http://localhost:3000/tasks/1.json?access_token=f2747fa2144e64fb90ff2425e66a620d

@@ -1,0 +1,32 @@
+<h1>My tasks</h1>
+
+<table id="tasks" class="table">
+  <thead>
+    <tr> 
+      <th class="big">Description</th> 
+      <th data-sort="int" class="sortable">Due date</th> 
+      <th data-sort="int" class="sortable">Priority</th> 
+      <th>Done?</th> 
+      <th></th> 
+    </tr>
+  </thead>
+  <tbody>
+    <% @tasks.each do |task| %>
+      <%= render partial: 'task_row', locals: { task: task } %>
+    <% end %>
+  </tbody>
+</table>
+
+<div id="errors" class="hidden"></div>
+
+<table class="table">
+  <%= form_for(@task, remote: true) do |f| %>
+    <tr>
+      <td class="big"><%= f.text_area :description, placeholder: "I need to do..." %></td>
+      <td><%= f.text_field :due_at, class: "date-picker" %></td>
+      <td class="small"><%= f.select :priority, options_for_select((0..100).step(5)) %></td>
+      <td class="small"><%= f.check_box :completed %></td>
+      <td class="small"><%= f.submit "Add" %></td>
+    </tr>
+  <% end %>
+</table>
